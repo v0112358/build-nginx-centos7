@@ -25,7 +25,8 @@ make && make install
 
 # Download sample configure and systemd unit file
 useradd -s /sbin/nologin -d /var/www/html nginx
-wget -O /etc/logrotate.d/nginx 
-wget -O /etc/systemd/system/nginx.service
+wget -O /etc/logrotate.d/nginx https://raw.githubusercontent.com/vynt-kenshiro/build-nginx-centos7/master/nginx.logrotate
+wget -O /etc/systemd/system/nginx.service https://raw.githubusercontent.com/vynt-kenshiro/build-nginx-centos7/master/nginx.service
 systemctl daemon-reload
 systemctl enable nginx
+
